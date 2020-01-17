@@ -1,0 +1,10 @@
+{
+  "deudas": [
+    {
+      "nombre": "",
+      "valorDeuda": "",
+      "acreedor": "",
+      "valorAbonado": ""
+    }
+  ]
+}
