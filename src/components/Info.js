@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux"; //snippet rx
-import {} from "../redux/store";
+import LinearProgress from "@material-ui/core/LinearProgress";
 
 const Info = props => {
   console.log(props);
@@ -10,6 +10,8 @@ const Info = props => {
       <h1>
         {props.name} {props.counter}
       </h1>
+      <LinearProgress variant="determinate" value={props.counter} />
+      <br></br>
     </div>
   );
 };

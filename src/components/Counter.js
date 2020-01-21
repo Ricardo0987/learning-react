@@ -3,6 +3,8 @@ import React from "react";
 import { connect } from "react-redux"; //snippet rx
 import { increment, decrement } from "../redux/actions/counterActions";
 import Button from '@material-ui/core/Button';
+import Badge from '@material-ui/core/Badge';
+import Typography from '@material-ui/core/Typography';
 
 
 const Counter = props => {
@@ -12,10 +14,10 @@ const Counter = props => {
     <div>
       <Button onClick={props.increment} variant="outlined"> + </Button>
       <Button onClick={props.decrement} variant="outlined" color="primary"> - </Button>
-      <button onClick={props.increment}>+</button>
-      <button onClick={props.decrement}>-</button>
-      <h1>{props.counter}</h1>
-      <p>{props.name}</p>
+      
+      <Badge color="secondary"s badgeContent={props.counter} showZero>
+          <Typography>{props.name}- edad </Typography>
+      </Badge>
     </div>
   );
 };
