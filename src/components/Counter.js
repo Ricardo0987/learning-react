@@ -6,26 +6,23 @@ import { increment, decrement } from "../store";
 const Counter = props => {
   console.log(props);
 
-  //se reemplaza por mapDispatchToProps
-  //   const inc = () => {
-  //     // props.dispatch({ type: "INCREMENT" });
-  //     props.dispatch(increment());
-  //   };
-  //   const dec = () => {
-  //     props.dispatch(decrement());
-  //   };
   return (
     <div>
       <button onClick={props.increment}>+</button>
       <button onClick={props.decrement}>-</button>
-      <h1>{props.count}</h1>
+      <h1>{props.counter}</h1>
+      <p>{props.name}</p>
     </div>
   );
 };
 
 //snippets rxmap
 const mapStateToProps = state => {
-  return { count: state };
+  console.log(state);
+  //antes
+  //   return { state };
+  //despues
+  return { name: state.user.name, counter: state.counter };
 };
 const mapDispatchToProps = dispatch => {
   return {
