@@ -24,7 +24,7 @@ function counter (state = initialState, action) {
 
 // Store
 // Almacenamiento de nuestro estado
-const store = createStore(counter)
+const store = createStore(counter,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 store.subscribe(() => {
   console.log(store.getState())
