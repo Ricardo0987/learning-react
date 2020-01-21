@@ -27,13 +27,13 @@ function counter(state = initialState, action) {
 // })
 
 // Creadores de acciones
-const increment = () => {
+export const increment = () => {
   return {
     type: INCREMENT
   };
 };
 
-const decrement = () => {
+export const decrement = () => {
   return {
     type: DECREMENT
   };
