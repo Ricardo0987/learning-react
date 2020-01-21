@@ -1,7 +1,7 @@
 //snippet rsc - componente funcional
 import React from "react";
 import { connect } from "react-redux"; //snippet rx
-import { increment, decrement } from "../store";
+import { increment, decrement } from "../redux/actions/counterActions";
 
 const Counter = props => {
   console.log(props);

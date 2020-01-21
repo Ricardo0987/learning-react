@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux"; //snippet rx
-import {} from "../store";
+import {} from "../redux/store";
 
 const Info = props => {
   console.log(props);
