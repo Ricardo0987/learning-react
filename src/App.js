@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { connect } from "react-redux";
+import { startAction } from "./actions/startAction";
+import { stopAction } from "./actions/stopAction";
 var axios = require('axios');
 var MockAdapter = require('axios-mock-adapter');
  
@@ -39,5 +42,14 @@ function App() {
     </div>
   );
 }
+const mapStateToProps = state => ({
+  ...state
+});
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  startAction: () => dispatch(startAction),
+  stopAction: () => dispatch(stopAction)
+});
+
+export default connect()(App);
+// export default App;

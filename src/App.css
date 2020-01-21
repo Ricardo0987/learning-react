@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.App-logo-paused {
+  animation-play-state: paused;
+}
