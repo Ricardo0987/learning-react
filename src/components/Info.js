@@ -2,10 +2,18 @@ import React from "react";
 import { connect } from "react-redux"; //snippet rx
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { Button } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
 import { updateName } from "../redux/actions/userActions";
+
 
 const Info = props => {
   console.log(props);
+
+  const handlerChange = e => {
+    console.log(e.target.value);
+    const name = e.target.value;
+    props.updateName(name);
+  };
 
   return (
     <div>
@@ -13,8 +21,9 @@ const Info = props => {
         {props.user.name} - {props.user.country}
       </h3>
       <LinearProgress variant="determinate" value={props.counter} />
-      <br></br>
-      <Button onClick={props.updateName}>Actualizar nombre</Button>
+      <br />
+      <TextField label="Nombre" onChange={handlerChange} />
+      <br />
     </div>
   );
 };
@@ -25,11 +34,8 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    updateName: () =>
-      dispatch({
-        type: "UPDATE_NAME",
-        payload: { name: "oscar", age: 25 }
-      })
+    updateName: (name) =>
+      dispatch(updateName(name))
   };
 };
 

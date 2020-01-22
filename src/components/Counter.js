@@ -14,7 +14,7 @@ const Counter = props => {
     <div>
       <Button onClick={props.increment} variant="outlined"> + </Button>
       <Button onClick={props.decrement} variant="outlined" color="primary"> - </Button>
-      
+      <br/><br/>
       <Badge color="secondary"s badgeContent={props.counter} showZero>
           <Typography>{props.name}- edad </Typography>
       </Badge>
