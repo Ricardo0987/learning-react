@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux"; //snippet rx
 import LinearProgress from "@material-ui/core/LinearProgress";
-import { Button } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
 import { updateName } from "../redux/actions/userActions";
 
