@@ -9,13 +9,12 @@ import Typography from '@material-ui/core/Typography';
 
 const Counter = props => {
   console.log(props);
-
   return (
     <div>
       <Button onClick={props.increment} variant="outlined"> + </Button>
       <Button onClick={props.decrement} variant="outlined" color="primary"> - </Button>
       <br/><br/>
-      <Badge color="secondary"s badgeContent={props.counter} showZero>
+      <Badge color="secondary" badgeContent={props.counter} showZero>
           <Typography>{props.name}- edad </Typography>
       </Badge>
     </div>
