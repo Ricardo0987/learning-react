@@ -12,7 +12,6 @@ describe("set pruebas objects", () => {
     });
   });
 
-
   test("buscar item por id", () => {
     const store = createStore();
     store.addItem({ name: "ricardo", id: 1, country: "españa" });
@@ -24,10 +23,11 @@ describe("set pruebas objects", () => {
     });
 
     expect(store.getById(1)).toMatchObject({
-      name: "ricardo",
+      name: "ricardo"
     });
+
+    expect(store.getById(1)).toHaveProperty("name");
+
+    expect(store.getById(1)).toHaveProperty("name","ricardo");
   });
-
-
-
 });
