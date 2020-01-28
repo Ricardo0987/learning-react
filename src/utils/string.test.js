@@ -11,7 +11,7 @@ describe("set pruebas string", () => {
   });
 
   test("prueba funcionn despide", () => {
-    expect(saludoDespide).not.toMatch("Bye");
+    expect(saludoDespide).not.toMatch("Hello");
   });
 
   test("prueba funcion getID", () => {
